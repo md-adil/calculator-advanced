@@ -28,6 +28,9 @@ function handleClick(e) {
         case "=":
             handleOperation();
             break;
+        case "CE":
+            output.value = "0";
+            break;
         default:
             if (out.value === "0") {
                 output.value = "";
@@ -51,7 +54,10 @@ function addButtons(items) {
     for (const num of items) {
         const btn = document.createElement("button");
         btn.innerText = num;
-        btn.className = "p-4 bg-gray-600 border border-solid border-200 hover:bg-gray-700";
+        btn.className = "p-4 rounded-full m-1 bg-gray-600 border border-solid border-200 hover:bg-gray-700";
+        if (num == "CE") {
+            btn.classList.add("col-span-3");
+        }
         np.appendChild(btn);
         btn.value = num;
         btn.addEventListener("click", handleClick);
