@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+body {
+    padding: 2rem;
+}
+
+#output {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.3rem;
+}
+
+@tailwind utilities;
